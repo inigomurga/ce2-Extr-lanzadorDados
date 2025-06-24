@@ -32,5 +32,13 @@ jobs:
           done
           echo "Server did not start in time" && exit 1
 
-      - name: Run tests
-        run: npm test
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run Python unittests
+        run: python -m unittest discover -s testUnitarios -p "test_*.py"
