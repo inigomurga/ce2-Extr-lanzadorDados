@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Dados</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <h1>Simulador de Lanzamiento de Dados</h1>
+    <div id="tabs">
+        <button id="tabSimulador" class="active">Simulador</button>
+        <button id="tabHistorial">Historial y Estadísticas</button>
+    </div>
+    <div id="diceSimulatorSection">
+        <div id="diceSimulator">
+            <label for="numDice">Número de dados:</label>
+            <input type="number" id="numDice" min="1" max="20" value="2">
+            <label for="numSides">Caras por dado:</label>
+            <input type="number" id="numSides" min="2" max="100" value="6">
+            <button id="rollDice">Lanzar Dados</button>
+            <div id="diceResults"></div>
+        </div>
+    </div>
+    <div id="historyStatsSection" style="display:none;">
+        <div id="historyStats">
+            <h2>Histórico de Lanzamientos</h2>
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Dados</th>
+                        <th>Caras</th>
+                        <th>Resultados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button id="clearHistory">Limpiar Historial</button>
+            <button id="downloadCSV">Descargar CSV</button>
+        </div>
+    </div>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
+    </div>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
