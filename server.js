@@ -4,6 +4,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+let contador = 0;
+let contador2 = 0;
+let contador3 = 0;
+
 let diceHistory = [];
 
 app.post('/roll', (req, res) => {
